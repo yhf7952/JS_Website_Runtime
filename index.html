@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<script type="text/javascript">
+function runTime(y=1970,m=0,d=1,h=0,mm=0,s=0){
+ window.setTimeout(function(){runTime(y,m,d,h,mm,s)}, 1000);
+ var diff = new Date() - new Date(y,m-1,d,h,mm,s);
+ //document.write(diff);
+ var days = Math.floor(diff/(24*3600*1000));
+ var hours = Math.floor((diff%(24*3600*1000))/(3600*1000));
+ var minutes = Math.floor(diff%(3600*1000)/(60*1000));
+ var seconds = Math.floor(diff%(60*1000)/1000);
+ if(document.getElementById("siteTime"))
+  document.getElementById("siteTime").innerHTML=days+"天"+hours+"小时"+minutes+"分"+seconds+"秒";
+ else
+  document.write('<span id="siteTime">'+days+"天"+hours+"小时"+minutes+"分"+seconds+"秒</span>");
+}
+</script>
+网站已萌萌哒运行了<script>runTime(2017,12,20,8,05,47);</script>
+</body>
+</html>
