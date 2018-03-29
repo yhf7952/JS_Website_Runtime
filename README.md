@@ -10,7 +10,7 @@
 runTime(2017,12,20,8,05,20);
 </pre>
 
-详情查看：https://y2z.top/blog/322/
+详情查看：https://yantuz.cn/322.html
 
 # 实现原理
 
